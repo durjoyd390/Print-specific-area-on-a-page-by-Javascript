@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>New</title>
+</head>
+<body>
+<div>
+	<h1>Non-Print Section</h1>
+	<p>Para 1 : Lorem 2 ipsum 2 dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<hr>
+</div>
+
+<div id="print_section">
+	<h1>Print Section</h1>
+	<p>Para 2 : Lorem 2 ipsum 2 dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<hr>
+</div>
+
+<button id="print_btn">Print</button>
+
+<script>
+document.getElementById("print_btn").addEventListener("click", function() {
+     var printContents = document.getElementById('print_section').innerHTML;
+     var originalContents = document.body.innerHTML;
+     document.body.innerHTML = printContents;
+     window.print();
+     //document.body.innerHTML = originalContents;
+     window.location.reload();
+});
+</script>
+
+</body>
+</html>
